@@ -7,9 +7,16 @@ import com.badlogic.gdx.graphics._
 import com.badlogic.gdx.graphics.g2d._
 import com.badlogic.gdx.math.{MathUtils, Vector3}
 
+import scala.collection.mutable
+
 package object bnw {
 
   def vector3(x: Float, y: Float, z: Float) = new Vector3(x, y, z)
+
+  def delta = graphics.getDeltaTime
+
+  def r(i: Int) = 1f / 0xff * i
+
 
   class GameWrapperInner(val wrapper: GameWrapper) {
     def screen_=(s: Screen) = wrapper.setScreen(s)
@@ -37,6 +44,11 @@ package object bnw {
 
 
 
+
+
   }
+
+
+
 }
 
